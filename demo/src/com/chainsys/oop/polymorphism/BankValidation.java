@@ -6,13 +6,13 @@ import java.util.regex.Pattern;
 public class BankValidation {
 	static Scanner sc = new Scanner(System.in);
 	
-	public static long validateAccountNo(String accntNo) {
-        if(Pattern.matches("^[0-9]{15}$", accntNo) ) {
-            return Long.parseLong(accntNo);
+	public static long validateAccountNo(String accountNumber) {
+        if(Pattern.matches("^[0-9]{15}$", accountNumber) ) {
+            return Long.parseLong(accountNumber);
         }
         System.out.println("Enter the correct account number");
-        accntNo=sc.next();
-        return validateAccountNo(accntNo);
+        accountNumber=sc.next();
+        return validateAccountNo(accountNumber);
     }
     public static String validateName(String name) {
         if(Pattern.matches("^[a-zA-Z]{3,25}", name)) {

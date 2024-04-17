@@ -5,7 +5,7 @@ public class Bank {
 	public Bank() {
 	}
 	
-	public static void depsoit(int amount, int accountNumber) {
+	public static void depsoit(int amount, long accountNumber) {
 		if(amount>0){
 		int balance =0;
 		balance =balance + amount;
@@ -15,7 +15,7 @@ public class Bank {
 		}
 		
 	}
-	public static void depsoit(int amount, int accountNumber,String accountName) {
+	public static void depsoit(int amount, long accountNumber,String accountName) {
 		if(amount>0 ) {
 		int balance = 0;
 		balance =balance + amount;
@@ -25,17 +25,17 @@ public class Bank {
 		}
 	}
 	
-	public static void depsoit(int amount,int ifscCode, int accountNumber ) {
+	public static void depsoit(int amount,int ifscCode, long accountNumber ) {
 		
 		if(amount>0 && ifscCode==1111) {
 		int balance = 0;
 		balance =balance +amount;
-		System.out.println(" your current balance : "+balance+" after depsoit of"+amount);
+		System.out.println("current balance for account number :"+accountNumber+" is "+balance+" after depsoit of"+amount);
 		}else {
 			System.out.println("Please enter valid data");
 		}
 		}
-	public static void withDrawl(int amount,int accountNumber) {
+	public static void withDrawl(int amount,long accountNumber) {
 		if (amount>0) {
 		int balance =1200;
 		balance= balance-amount;

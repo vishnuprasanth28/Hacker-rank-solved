@@ -1,9 +1,9 @@
 package com.chainsys.oop.polymorphism;
 
-import java.util.regex.Pattern;
+
 
 public class BankData {
-	int accountNumber;
+	String accountNumber;
 	String accountName;
 	String bankName;
 	int ifscCode;
@@ -14,7 +14,7 @@ public class BankData {
 	}
 	
 	
-	public BankData(int accountNumber, String accountName, String bankName, int ifscCode, String branchLocation) {
+	public BankData(String accountNumber, String accountName, String bankName, int ifscCode, String branchLocation) {
 	
 		this.accountNumber = accountNumber;
 		this.accountName = accountName;
@@ -28,25 +28,20 @@ public class BankData {
 				+ ", ifscCode=" + ifscCode + ", branchLocation=" + branchLocation + "]";
 	}
 	
-	public int getAccountNumber() {
-		 return accountNumber;
+	public long getAccountNumber() {
+		 return Long.parseLong(accountNumber);
 	}
 	public void setAccountNumber(String accountNumber) {
-		if(Pattern.matches("^[0-9]{8}$", accountNumber) ) {
-		this.accountNumber = Integer.parseInt(accountNumber);
-		} else {System.out.println("please enter valid account number");
 		
-		}
+		this.accountNumber = accountNumber;
+		
 	}
 	public String getAccountName() {
 		return accountName;
 	}
 	public void setAccountName(String accountName) {
-		if(Pattern.matches("^[a-zA-Z]{3,25}", accountName)) {
+		
 		this.accountName = accountName;
-		}else { 
-			System.out.println("Please enter valid name");
-		}
 	}
 		
 	public String getBankName() {
