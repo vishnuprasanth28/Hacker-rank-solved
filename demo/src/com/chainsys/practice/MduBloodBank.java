@@ -88,6 +88,7 @@ public class MduBloodBank {
 					donor.setAge(age);
 				} else {
 					System.out.println("please enter valid age");
+					age = sc.nextInt();
 				}
 				System.out.println("enter your blood group");
 				String bloodgrp = sc.next();

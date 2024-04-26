@@ -16,6 +16,14 @@ public class MduBranch {
 					System.out.println("Enter your password");
 					String password =sc.next();
 					admin.adminLogin(userName, password);
+					System.out.println("Do you want add blood stock (yes / no)");
+					String addStock =sc.next();
+					if(addStock.equalsIgnoreCase("yes")){
+						
+						admin.addBloodStock();
+					}else {
+						System.out.println(" Signed out ");
+					}
 					break;
 		case 'n':
 			MduBloodBank.function();
