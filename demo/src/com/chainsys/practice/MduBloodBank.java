@@ -8,6 +8,9 @@ import java.util.regex.Pattern;
 public class MduBloodBank {
 	public static void function()
 	{
+		
+		MduBloodBankCamp mduCamp = new MduBloodBankCamp();
+		
 			Scanner sc = new Scanner(System.in);
 		
 		BloodBank bloodBank = new BloodBank();
@@ -186,11 +189,12 @@ public class MduBloodBank {
 		if (needCamp == 'y' || needCamp == 'n') {
 			switch (needCamp) {
 			case 'y':
-				MduBloodBankCamp.organiseCamp();
+				mduCamp.organiseCamp();
 				break;
 
 			case 'n':
 				System.out.println(" Encourage blood donation ");
+				mduCamp.awarness();
 				break;
 			}
 		} else {
