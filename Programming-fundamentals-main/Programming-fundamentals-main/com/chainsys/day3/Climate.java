@@ -1,4 +1,4 @@
-package com.chainsys.work;
+package com.chainsys.day3;
 
 import java.util.Scanner;
 
@@ -13,25 +13,26 @@ public class Climate {
 			int temp = sc.nextInt();
 			if (temp>0) {
 			if (temp<32) {
-				System.out.println("Advice to heavy jacket");
+				System.out.println("advice to heavy jacket");
 				
 			}
 			else if (temp>32 || temp <50) {
-				System.out.println("Advice to  take light jacket");
+				System.out.println("advice to  take light jacket");
 				
 			}
 			else {
 				System.out.println("No need jacket");
 			}
 		}else {
-			System.out.println("Please valid temperature");
+			System.out.println("please valid temperature");
 		}
 		
 		}
 		else {
 			System.out.println("no rain");
 		}
+		sc.close();
 	}
+	
 
 }
-
